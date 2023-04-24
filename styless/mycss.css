@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px 150px 50px 400px 150px;
+    grid-template-areas: 
+    "header1 header1 header1 header1 header1"
+    "header2 header2 header2 header2 header2"
+    "header3 header3 header3 header3 header3"
+    "nav conten conten conten conten"
+    "footer footer footer footer footer";
+}
+/* phần header01 */
+.item01 {
+    grid-area: header1;
+    border-bottom: 1px solid black;
+}
+
+.item01 {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+
+.item01 div {
+    display: flex;
+}
+
+.item01 div p {
+    position: absolute;
+    color: #333;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.item01 div p:hover {
+    cursor: pointer;
+    color: rgb(124, 63, 245);
+}
+
+/* phần header02 */
+.item02 {
+    grid-area: header2;
+    background-color: rgba(157, 188, 215, 0.917);
+    display: flex;
+}
+
+.item02 div:nth-child(1) {
+    position: relative;
+    display: block;
+    background-color: aqua;
+    height: 130px;
+    width: 130px;
+    top: 50%;
+    transform: translate(60%, -50%);
+}
+
+.item02 div:nth-child(1) img {
+    height: 130px;
+    width: 130px;
+}
+
+.item02 div:nth-child(2) {
+    position: relative;
+    display: block;
+    width: 700px;
+    height: 40px;
+    border-radius: 5px;
+    top: 50%;
+    left: 43%;
+    background-color: #c4c4c4;
+    transform: translate(-50%,-50%);
+}
+
+.item02 div:nth-child(2) div {
+    position: relative;
+    left: -2%;
+    width: 40px;
+    height: 40px;
+    background-color: #c4c4c4;
+}
+
+.item02 div:nth-child(2) div i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.item02 div:nth-child(2)::before {
+    display: block;
+    position: absolute;
+    content: "";
+    height: 30px;
+    border: 1px solid black;
+    top: 50%;
+    left: 9%;
+    transform: translate(-50%,-50%);
+}
+
+.item02 div:nth-child(2) input {
+    position: absolute;
+    width: 600px;
+    border-style: none;
+    outline: none;
+    background-color: #c4c4c4;
+    top: 50%;
+    left: 53%;
+    transform: translate(-50%,-50%);
+
+}
+
+/* phần header03 */
+.item03 {
+    grid-area: header3;
+    background-color: #c4c4c4;
+}
+
+.item03 {
+    position: relative;
+    display: flex;
+    justify-content:space-around;
+}
+
+.item03 div {
+    height: 50px;
+    width: 100px;
+}
+
+.item03 div p {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.item03 div:hover {
+    cursor: pointer;
+}
+
+.item03 div p:hover {
+    color: rgb(124, 63, 245);
+}
+
+.item04 {
+    grid-area: nav;
+}
+
+.item05 {
+    grid-area: conten;
+}
+
+.item07 {
+    grid-area: footer;
+}
